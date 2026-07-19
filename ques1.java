@@ -9,8 +9,14 @@ Dynamic Array in Python: List */
 import java.util.ArrayList;
 import java.util.*;
 public class ques1 {
-    static ArrayList<Integer> evenNumber(ArrayList<Interger>A){
-
+    static ArrayList<Integer> evenNumber(ArrayList<Integer>A){
+        ArrayList<Integer>Result = new ArrayList<>();
+        for(int i = 0; i<A.size(); i++){
+            if(A.get(i) % 2 ==0){
+                Result.add(A.get(i));
+            }
+        }
+        return Result;
     }
         public static void main (String[] args) {
             Scanner sc = new Scanner(System.in);
@@ -19,6 +25,8 @@ public class ques1 {
             for(int i=0; i<n; i++){
                 Anew.add(sc.nextInt());
             }
+            ArrayList<Integer> evenNumber = evenNumber(Anew);
+            System.out.println(evenNumber);
 
 
         }
